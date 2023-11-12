@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button Hover Animation</title>
+
+    <style>
+      button {
+        font-size: 24px;
+        color: #020e26;
+        background: transparent;
+        border: 1px solid #020e26;
+        border-radius: 48px;
+        padding: 12px 32px;
+        transition: 0.4s;
+      }
+
+      button:hover {
+        color: #ffffff;
+      }
+
+      button::before {
+        content: '';
+        position: absolute;
+        height: 62px;
+        width: 300px;
+        z-index: -1;
+        border-radius: 48px;
+        background: #3bd9d9;
+        transform: translate(-28px, -8px);
+        transition: 0.4s;
+      }
+
+      button:hover::before {
+        background: #b527cf;
+        transform: translate(-33px, -13px);
+      }
+    </style>
+  </head>
+  <body>
+    <button>Van Trung Subcribes</button>
+  </body>
+</html>
